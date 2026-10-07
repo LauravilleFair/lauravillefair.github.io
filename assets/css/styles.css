@@ -31,7 +31,6 @@ h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; }
 h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; }
 h3 { font-size: 1.2rem; font-weight: 600; }
 p { margin: 0 0 1em; }
-.script { font-family: "Allura", cursive; font-weight: 400; }
 
 .container { width: min(var(--max), 100% - 32px); margin-inline: auto; }
 .skip-link { position: absolute; left: -999px; top: 8px; background: var(--butter); padding: 8px 14px; z-index: 100; }
@@ -57,8 +56,9 @@ p { margin: 0 0 1em; }
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 68px; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
 .brand img { border-radius: 50%; background: #fff; }
-.brand span { font: 400 1.9rem/1 "Allura", cursive; }
-.brand b { font: 700 1rem/1 "Poppins", sans-serif; color: var(--butter); letter-spacing: .06em; margin-left: 4px; }
+.brand span { display: flex; align-items: center; }
+.brand b { font: 700 1rem/1 "Poppins", sans-serif; color: var(--butter); letter-spacing: .06em; margin-left: 4px; align-self: flex-end; margin-bottom: 4px; }
+.brand .script-word { height: 40px; width: auto; border-radius: 0; background: none; }
 .nav-links { list-style: none; display: flex; align-items: center; gap: 4px; margin: 0; padding: 0; }
 .nav-links a { color: #fff; text-decoration: none; font-weight: 500; padding: 8px 12px; border-radius: 8px; font-size: .97rem; }
 .nav-links a:hover { background: rgba(255,255,255,.1); }
@@ -105,7 +105,7 @@ p { margin: 0 0 1em; }
 }
 .hero__logo { width: 210px; margin: 0 auto 18px; border-radius: 50%; background: #fff; box-shadow: 0 10px 40px rgba(0,0,0,.25); }
 .hero h1 { color: #fff; margin-bottom: .2em; }
-.hero h1 .script { font-size: 1.35em; display: block; line-height: 1; }
+.hero h1 .script { display: block; width: min(420px, 78vw); height: auto; margin: 0 auto 4px; }
 .hero h1 .fair { color: var(--butter); letter-spacing: .08em; }
 .hero__date { font: 600 1.25rem/1.4 "Poppins", sans-serif; color: var(--butter); margin: 10px 0 4px; }
 .hero__place { opacity: .9; margin-bottom: 24px; }
@@ -183,7 +183,9 @@ p { margin: 0 0 1em; }
 .site-footer h3 { color: var(--butter); font-size: 1rem; text-transform: uppercase; letter-spacing: .08em; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
 .site-footer li { margin-bottom: 6px; }
-.footer-brand { font: 400 2.2rem/1 "Allura", cursive; color: #fff; }
+.footer-brand { display: flex; align-items: flex-end; gap: 6px; color: #fff; }
+.footer-brand .script-word { height: 52px; width: auto; }
+.footer-brand b { margin-bottom: 6px; }
 .footer-brand b { font: 700 1rem "Poppins", sans-serif; color: var(--butter); letter-spacing: .08em; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 32px; padding-top: 18px; font-size: .88rem; }
 
@@ -207,8 +209,8 @@ p { margin: 0 0 1em; }
 
 /* "The" in the wordmark */
 .brand small { font: 600 .7rem/1 "Poppins", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--butter); align-self: flex-start; margin-right: 4px; }
-.brand span { display: flex; align-items: baseline; }
-.footer-brand small { font: 600 .8rem "Poppins", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--butter); vertical-align: top; }
+
+.footer-brand small { font: 600 .8rem "Poppins", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--butter); align-self: flex-start; }
 .hero h1 .the { display: block; font: 600 1rem/1 "Poppins", sans-serif; letter-spacing: .3em; text-transform: uppercase; color: var(--butter); margin-bottom: 6px; }
 .form-embed[data-embed="volunteer"] iframe { height: 1100px; }
 
