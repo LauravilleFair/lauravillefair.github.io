@@ -13,8 +13,9 @@ _Last updated: 2026-10-07_
 - [ ] Fill in the yellow-highlighted placeholders on the draft site (hours, address, fees, FAQ answers, etc.).
 - [ ] Swap in the full-resolution logo (currently `assets/images/logo-lowres.webp`).
 - [ ] Add past fair photos to the gallery.
+- [ ] Rename the volunteer form for year-round use (drop "2026", use "The Lauraville Fair", update the "40th" wording). The embed link stays the same after renaming.
 - [ ] Create a "Notify me when applications open" Google Form (email + which categories they're interested in).
-- [ ] Add Google Form links to the `FORMS` list at the top of `assets/js/main.js` (notify, artisan, budding, food, orgs, entertainment, sponsor, volunteer). Use the long `.../viewform` link, not a forms.gle short link.
+- [ ] Add remaining Google Form links (volunteer is done) to the `FORMS` list at the top of `assets/js/main.js` (notify, artisan, budding, food, orgs, entertainment, sponsor, volunteer). Use the long `.../viewform` link, not a forms.gle short link.
 - [ ] In April: pick the go-live date, set `APPLICATIONS_OPEN` at the top of `assets/js/main.js` — the site switches from "notify me" to the real applications on that date automatically — and email everyone on the notify list.
 - [ ] Decide how vendors pay booth fees after acceptance (currently invoiced). Payments are separate from the application.
 - [ ] Confirm 2027 prices (site shows 2026: Artisan $75 +$10 spotlight, Budding $25 +$5, Food $200, Neighborhood org $50, 501(c)(3) free; sponsors Silver $500, Community $300, Friend of the Fair $100 or $150?, Platinum/Gold prices unknown).
@@ -42,6 +43,7 @@ Both registered Sep 2, 2022. Domain privacy is on. Both currently show GoDaddy's
 | Google Workspace | @thelauravillefair.org email | _Unknown — find out who the admin is_ |
 | GitHub organization `LauravilleFair` (github.com/LauravilleFair) | Website code + hosting (GitHub Pages) | Jaron (owner, via personal account jaronervin) |
 | GitHub repo `LauravilleFair/lauravillefair.github.io` | The site's files (public — required for free Pages) | Same as above |
+| Volunteer sign-up Google Form ("2026 Lauraville Fair - Volunteer Signup", owner anne@thelauravillefair.org) | Embedded on Get Involved page, open year-round | Embed link: https://docs.google.com/forms/d/e/1FAIpQLSeDDVWm9sAnAsSfnVpJs2xV83ABrG366GGnju-wbQtdi0TFZA/viewform |
 | Google Forms + Drive spreadsheet | Vendor/volunteer/etc. applications | _Whose Google account owns these? Ideally the fair's Workspace account_ |
 
 ## DNS changes for launch (don't do these until the site is ready)
