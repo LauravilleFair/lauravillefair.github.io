@@ -14,7 +14,7 @@ _Last updated: 2026-10-07_
 - [ ] Swap in the full-resolution logo (currently `assets/images/logo-lowres.webp`).
 - [ ] Add past fair photos to the gallery.
 - [ ] Rename the volunteer form for year-round use (drop "2026", use "The Lauraville Fair", update the "40th" wording). The embed link stays the same after renaming.
-- [ ] Create a "Notify me when applications open" Google Form (email + which categories they're interested in).
+- [ ] Create the "Notify me when applications open" Google Form (two short-answer questions: Email, Category), ideally under a @thelauravillefair.org account, link it to a sheet, and send Claude the link to wire up. The email signup boxes on the site are already built and waiting for it.
 - [ ] Add remaining Google Form links (volunteer is done) to the `FORMS` list at the top of `assets/js/main.js` (notify, artisan, budding, food, orgs, entertainment, sponsor, volunteer). Use the long `.../viewform` link, not a forms.gle short link.
 - [ ] In April: pick the go-live date, set `APPLICATIONS_OPEN` at the top of `assets/js/main.js` — the site switches from "notify me" to the real applications on that date automatically — and email everyone on the notify list.
 - [ ] Decide how vendors pay booth fees after acceptance (currently invoiced). Payments are separate from the application.
