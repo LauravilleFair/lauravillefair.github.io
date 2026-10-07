@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -85,7 +85,13 @@
           <div class="apply__closed">
             <h3>Artisan: applications open in April</h3>
             <p>Leave your email and we'll let you know the moment applications open.</p>
-            <div class="form-embed" data-embed="notify"><p class="form-embed__missing"><span class="todo">“Notify me” form goes here</span></p></div>
+            <form class="notify" data-category="Artisan">
+              <label class="sr-only" for="notify-artisan">Email address</label>
+              <input id="notify-artisan" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+              <button class="btn btn--navy" type="submit">Notify me</button>
+            </form>
+            <p class="notify__done" hidden role="status">You're on the list! We'll email you when artisan applications open.</p>
+            <p class="notify__error" hidden role="alert">Sorry, something went wrong. Please try again, or email us instead.</p>
           </div>
           <div class="apply__open" hidden>
             <h3>Artisan application</h3>
@@ -112,7 +118,13 @@
           <div class="apply__closed">
             <h3>Budding Entrepreneur: applications open in April</h3>
             <p>Leave your email and we'll let you know the moment applications open.</p>
-            <div class="form-embed" data-embed="notify"><p class="form-embed__missing"><span class="todo">“Notify me” form goes here</span></p></div>
+            <form class="notify" data-category="Budding Entrepreneur">
+              <label class="sr-only" for="notify-budding">Email address</label>
+              <input id="notify-budding" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+              <button class="btn btn--navy" type="submit">Notify me</button>
+            </form>
+            <p class="notify__done" hidden role="status">You're on the list! We'll email you when budding entrepreneur applications open.</p>
+            <p class="notify__error" hidden role="alert">Sorry, something went wrong. Please try again, or email us instead.</p>
           </div>
           <div class="apply__open" hidden>
             <h3>Budding Entrepreneur application</h3>
@@ -140,7 +152,13 @@
           <div class="apply__closed">
             <h3>Food Vendor: applications open in April</h3>
             <p>Leave your email and we'll let you know the moment applications open.</p>
-            <div class="form-embed" data-embed="notify"><p class="form-embed__missing"><span class="todo">“Notify me” form goes here</span></p></div>
+            <form class="notify" data-category="Food Vendor">
+              <label class="sr-only" for="notify-food">Email address</label>
+              <input id="notify-food" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+              <button class="btn btn--navy" type="submit">Notify me</button>
+            </form>
+            <p class="notify__done" hidden role="status">You're on the list! We'll email you when food vendor applications open.</p>
+            <p class="notify__error" hidden role="alert">Sorry, something went wrong. Please try again, or email us instead.</p>
           </div>
           <div class="apply__open" hidden>
             <h3>Food Vendor application</h3>
@@ -167,7 +185,13 @@
           <div class="apply__closed">
             <h3>Community Organization: applications open in April</h3>
             <p>Leave your email and we'll let you know the moment applications open.</p>
-            <div class="form-embed" data-embed="notify"><p class="form-embed__missing"><span class="todo">“Notify me” form goes here</span></p></div>
+            <form class="notify" data-category="Community Organization">
+              <label class="sr-only" for="notify-orgs">Email address</label>
+              <input id="notify-orgs" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+              <button class="btn btn--navy" type="submit">Notify me</button>
+            </form>
+            <p class="notify__done" hidden role="status">You're on the list! We'll email you when community organization applications open.</p>
+            <p class="notify__error" hidden role="alert">Sorry, something went wrong. Please try again, or email us instead.</p>
           </div>
           <div class="apply__open" hidden>
             <h3>Community Organization application</h3>
@@ -223,6 +247,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=3"></script>
+  <script src="assets/js/main.js?v=4"></script>
 </body>
 </html>

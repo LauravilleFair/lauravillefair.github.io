@@ -7,7 +7,6 @@ const APPLICATIONS_OPEN = null;
 
 // Google Form links. Use each form's normal share link (ends in /viewform).
 const FORMS = {
-  notify: '',         // "Notify me when applications open"
   artisan: '',
   budding: '',
   food: '',
@@ -15,6 +14,16 @@ const FORMS = {
   entertainment: '',
   sponsor: '',
   volunteer: 'https://docs.google.com/forms/d/e/1FAIpQLSeDDVWm9sAnAsSfnVpJs2xV83ABrG366GGnju-wbQtdi0TFZA/viewform',
+};
+
+// The "notify me when applications open" list. Signups are sent to this
+// Google Form (two short-answer questions: Email, Category).
+// formId is the long code in the form's /forms/d/e/<formId>/viewform link;
+// the entry numbers come from the form's "Get pre-filled link".
+const NOTIFY_FORM = {
+  formId: '',
+  emailEntry: '',     // e.g. 'entry.123456789'
+  categoryEntry: '',  // e.g. 'entry.987654321'
 };
 
 // Fair day start time (24-hour clock), used by the countdown.
@@ -93,4 +102,32 @@ document.querySelectorAll('.form-embed[data-embed]').forEach(box => {
   frame.loading = 'lazy';
   frame.title = 'Sign-up form';
   box.appendChild(frame);
+});
+
+// ===== "Notify me" signups =====
+document.querySelectorAll('form.notify').forEach(form => {
+  const block = form.parentElement;
+  const done = block.querySelector('.notify__done');
+  const error = block.querySelector('.notify__error');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    error.hidden = true;
+    if (!NOTIFY_FORM.formId) { error.hidden = false; return; }
+    const button = form.querySelector('button');
+    button.disabled = true;
+    const data = new URLSearchParams();
+    data.append(NOTIFY_FORM.emailEntry, form.email.value.trim());
+    data.append(NOTIFY_FORM.categoryEntry, form.dataset.category);
+    try {
+      // Google Forms doesn't let other sites read its reply ("no-cors"),
+      // so a completed request is treated as success.
+      await fetch(`https://docs.google.com/forms/d/e/${NOTIFY_FORM.formId}/formResponse`,
+        { method: 'POST', mode: 'no-cors', body: data });
+      form.hidden = true;
+      done.hidden = false;
+    } catch {
+      error.hidden = false;
+      button.disabled = false;
+    }
+  });
 });
