@@ -21,9 +21,9 @@ const FORMS = {
 // formId is the long code in the form's /forms/d/e/<formId>/viewform link;
 // the entry numbers come from the form's "Get pre-filled link".
 const NOTIFY_FORM = {
-  formId: '',
-  emailEntry: '',     // e.g. 'entry.123456789'
-  categoryEntry: '',  // e.g. 'entry.987654321'
+  formId: '1FAIpQLSdGzs9WuNaIiNrlgKD10tNyBR0ije07j8IzvKlerbxi06sZCw',
+  emailEntry: 'entry.1523622232',
+  categoryEntry: 'entry.846423299',
 };
 
 // Fair day start time (24-hour clock), used by the countdown.
