@@ -9,9 +9,15 @@ _Last updated: 2026-10-07_
 
 - [ ] **Transfer GoDaddy account ownership** to Jaron (or a fair email Jaron controls). Current owner is out of the country for a few days — follow up when she's back. Alternative if a full transfer is a hassle: she adds Jaron via GoDaddy **Delegate Access**.
 - [x] **Create GitHub organization** — done 2026-10-07: `LauravilleFair` (Jaron is owner/admin).
-- [ ] Create the website repository inside that organization and turn on GitHub Pages.
-- [ ] Write site specs (pages, content, look).
-- [ ] **Launch day:** point thelauravillefair.org at GitHub (see DNS section below).
+- [x] Create website repository + turn on GitHub Pages — done 2026-10-07. Draft preview: https://lauravillefair.github.io
+- [ ] Fill in the yellow-highlighted placeholders on the draft site (hours, address, fees, FAQ answers, etc.).
+- [ ] Swap in the full-resolution logo (currently `assets/images/logo-lowres.webp`).
+- [ ] Add past fair photos to the gallery.
+- [ ] Link each form button to its Google Form (vendor, performer, volunteer, sponsor) — URLs go in the `href` of those buttons.
+- [ ] Find out who is the Google Workspace admin for @thelauravillefair.org.
+- [ ] **Before launch:** verify thelauravillefair.org in the GitHub org settings (adds one TXT record in GoDaddy; prevents anyone else claiming the domain on GitHub).
+- [ ] **Launch day:** point thelauravillefair.org at GitHub (see DNS section below), then set the custom domain in the repo's Pages settings and tick "Enforce HTTPS".
+- [ ] **Launch day:** remove the draft banner and the `noindex` line from every page.
 - [ ] **Launch day:** forward lauravillefair.org → https://thelauravillefair.org.
 
 ## Domains
@@ -30,6 +36,8 @@ Both registered Sep 2, 2022. Domain privacy is on. Both currently show GoDaddy's
 | GoDaddy | Domain registration + DNS for both domains | Jaron (logged in); account owner is a fair volunteer — transfer pending |
 | Google Workspace | @thelauravillefair.org email | _Unknown — find out who the admin is_ |
 | GitHub organization `LauravilleFair` (github.com/LauravilleFair) | Website code + hosting (GitHub Pages) | Jaron (owner, via personal account jaronervin) |
+| GitHub repo `LauravilleFair/lauravillefair.github.io` | The site's files (public — required for free Pages) | Same as above |
+| Google Forms + Drive spreadsheet | Vendor/volunteer/etc. applications | _Whose Google account owns these? Ideally the fair's Workspace account_ |
 
 ## DNS changes for launch (don't do these until the site is ready)
 
