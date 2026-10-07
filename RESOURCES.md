@@ -22,7 +22,9 @@ _Last updated: 2026-10-07_
 - [ ] Budding Entrepreneur: decide age range / guardian rules for the vendor page.
 - [ ] Find out who is the Google Workspace admin for @thelauravillefair.org.
 - [ ] **Before launch:** verify thelauravillefair.org in the GitHub org settings (adds one TXT record in GoDaddy; prevents anyone else claiming the domain on GitHub).
-- [ ] **Coming Soon:** point thelauravillefair.org at GitHub (see DNS section below); Claude then sets the custom domain + HTTPS on the coming-soon repo.
+- [x] **Coming Soon live** at https://thelauravillefair.org (2026-10-07). DNS changed, custom domain + HTTPS set on the coming-soon repo.
+- [ ] Confirm https://www.thelauravillefair.org works. GitHub's certificate covered only the bare domain at first; http://www already redirects correctly.
+- [ ] Optional: verify thelauravillefair.org in the GitHub org settings (Settings → Pages → Add a domain, then one TXT record in GoDaddy).
 - [ ] **Full-site launch day:** move the custom domain from the coming-soon repo to the main repo (no DNS changes).
 - [ ] **Launch day:** remove the draft banner and the `noindex` line from every page.
 - [ ] Forward lauravillefair.org (can be done now, with the Coming Soon change) → https://thelauravillefair.org.
@@ -34,7 +36,7 @@ _Last updated: 2026-10-07_
 | thelauravillefair.org | **Main site** | GoDaddy | Sep 3, 2028 | Has Google Workspace email — never touch the MX records |
 | lauravillefair.org | Redirects to main site | GoDaddy | Sep 3, 2028 | No email |
 
-Both registered Sep 2, 2022. Domain privacy is on. Both currently show GoDaddy's parked page (as of 2026-10-07).
+Both registered Sep 2, 2022. Domain privacy is on. thelauravillefair.org shows the Coming Soon page (since 2026-10-07); lauravillefair.org still shows GoDaddy's parked page until forwarding is set up.
 
 ## Accounts
 
@@ -57,7 +59,6 @@ The DNS changes below are being made now so thelauravillefair.org shows the Comi
 ## DNS settings
 
 **thelauravillefair.org** (GoDaddy → DNS):
-- Delete the two parked `A` records (`3.33.130.190`, `15.197.148.33`).
 - Add four `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
 - Change `www` CNAME to `lauravillefair.github.io`.
 - **Leave all MX (Google) records alone.**
