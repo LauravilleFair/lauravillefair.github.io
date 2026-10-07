@@ -203,3 +203,10 @@ p { margin: 0 0 1em; }
 .form-embed[data-embed="notify"] iframe { height: 520px; }
 .form-embed:not([data-embed="notify"]) iframe { height: 1400px; }
 .form-embed__missing { margin: 12px 0 0; }
+
+/* "The" in the wordmark */
+.brand small { font: 600 .7rem/1 "Poppins", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--butter); align-self: flex-start; margin-right: 4px; }
+.brand span { display: flex; align-items: baseline; }
+.footer-brand small { font: 600 .8rem "Poppins", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--butter); vertical-align: top; }
+.hero h1 .the { display: block; font: 600 1rem/1 "Poppins", sans-serif; letter-spacing: .3em; text-transform: uppercase; color: var(--butter); margin-bottom: 6px; }
+.form-embed[data-embed="volunteer"] iframe { height: 1100px; }

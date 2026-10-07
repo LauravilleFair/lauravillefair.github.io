@@ -14,7 +14,7 @@ const FORMS = {
   orgs: '',
   entertainment: '',
   sponsor: '',
-  volunteer: '',
+  volunteer: 'https://docs.google.com/forms/d/e/1FAIpQLSeDDVWm9sAnAsSfnVpJs2xV83ABrG366GGnju-wbQtdi0TFZA/viewform',
 };
 
 // Fair day start time (24-hour clock), used by the countdown.
@@ -91,6 +91,6 @@ document.querySelectorAll('.form-embed[data-embed]').forEach(box => {
   const frame = document.createElement('iframe');
   frame.src = src;
   frame.loading = 'lazy';
-  frame.title = 'Application form';
+  frame.title = 'Sign-up form';
   box.appendChild(frame);
 });
