@@ -22,9 +22,10 @@ _Last updated: 2026-10-07_
 - [ ] Budding Entrepreneur: decide age range / guardian rules for the vendor page.
 - [ ] Find out who is the Google Workspace admin for @thelauravillefair.org.
 - [ ] **Before launch:** verify thelauravillefair.org in the GitHub org settings (adds one TXT record in GoDaddy; prevents anyone else claiming the domain on GitHub).
-- [ ] **Launch day:** point thelauravillefair.org at GitHub (see DNS section below), then set the custom domain in the repo's Pages settings and tick "Enforce HTTPS".
+- [ ] **Coming Soon:** point thelauravillefair.org at GitHub (see DNS section below); Claude then sets the custom domain + HTTPS on the coming-soon repo.
+- [ ] **Full-site launch day:** move the custom domain from the coming-soon repo to the main repo (no DNS changes).
 - [ ] **Launch day:** remove the draft banner and the `noindex` line from every page.
-- [ ] **Launch day:** forward lauravillefair.org → https://thelauravillefair.org.
+- [ ] Forward lauravillefair.org (can be done now, with the Coming Soon change) → https://thelauravillefair.org.
 
 ## Domains
 
@@ -42,12 +43,18 @@ Both registered Sep 2, 2022. Domain privacy is on. Both currently show GoDaddy's
 | GoDaddy | Domain registration + DNS for both domains | Jaron (logged in); account owner is a fair volunteer — transfer pending |
 | Google Workspace | @thelauravillefair.org email | _Unknown — find out who the admin is_ |
 | GitHub organization `LauravilleFair` (github.com/LauravilleFair) | Website code + hosting (GitHub Pages) | Jaron (owner, via personal account jaronervin) |
+| GitHub repo `LauravilleFair/coming-soon` (local: Documents\Lauraville Fair\Coming Soon) | Temporary Coming Soon page served at thelauravillefair.org until launch | Same as above |
 | GitHub repo `LauravilleFair/lauravillefair.github.io` | The site's files (public — required for free Pages) | Same as above |
 | Volunteer sign-up Google Form ("2026 Lauraville Fair - Volunteer Signup", owner anne@thelauravillefair.org) | Embedded on Get Involved page, open year-round | Embed link: https://docs.google.com/forms/d/e/1FAIpQLSeDDVWm9sAnAsSfnVpJs2xV83ABrG366GGnju-wbQtdi0TFZA/viewform |
 | "Lauraville Fair - Sign up for Notifications" Google Form + (Responses) sheet, owner jay@thelauravillefair.org | Email list for "notify me when applications open" — powers every signup box on the site | Form ID + entry codes are in `NOTIFY_FORM` at the top of `assets/js/main.js` |
 | Google Forms + Drive spreadsheet | Vendor/volunteer/etc. applications | _Whose Google account owns these? Ideally the fair's Workspace account_ |
 
-## DNS changes for launch (don't do these until the site is ready)
+## Coming Soon page (2026-10-07)
+
+The DNS changes below are being made now so thelauravillefair.org shows the Coming Soon page (repo `LauravilleFair/coming-soon`, custom domain set on that repo).
+**On full-site launch day** no DNS changes are needed: remove the custom domain from the `coming-soon` repo's Pages settings, add it to the `lauravillefair.github.io` repo, remove the draft banner + noindex, and tick "Enforce HTTPS".
+
+## DNS settings
 
 **thelauravillefair.org** (GoDaddy → DNS):
 - Delete the two parked `A` records (`3.33.130.190`, `15.197.148.33`).
