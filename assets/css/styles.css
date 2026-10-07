@@ -226,3 +226,10 @@ p { margin: 0 0 1em; }
 .notify__done { color: var(--navy) !important; font-weight: 600; margin-top: 12px; }
 .notify__error { color: #a32020 !important; margin-top: 12px; }
 .hero__edition { display: inline-block; margin: 14px 0 0; padding: 5px 14px; border: 2px solid var(--butter); border-radius: 999px; color: var(--butter); font: 600 .85rem/1.2 "Poppins", sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+
+/* ===== Pay your booth fee ===== */
+.pay-notice { background: #fff7c2; border: 1px solid #e9d97a; border-radius: var(--radius); padding: 16px 20px; margin-bottom: 24px; color: #5c4a00; }
+.pay-card h3 { margin-bottom: 4px; }
+.pay-card .price { margin: 0 0 10px; font-size: 1.4rem; }
+.pay-card .btn { margin-top: auto; }
+.btn--disabled { background: var(--line); color: var(--muted) !important; cursor: default; pointer-events: none; }

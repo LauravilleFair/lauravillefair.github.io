@@ -26,6 +26,22 @@ const NOTIFY_FORM = {
   categoryEntry: 'entry.846423299',
 };
 
+// Square payment links for the hidden "Pay your booth fee" page (pay-booth-fee.html).
+// Paste each Square payment link between the quotes.
+const PAYMENT_LINKS = {
+  artisan: '',
+  artisanSpotlight: '',
+  budding: '',
+  buddingSpotlight: '',
+  food: '',
+  orgs: '',
+  friend: '',
+  community: '',
+  silver: '',
+  gold: '',
+  platinum: '',
+};
+
 // Fair day start time (24-hour clock), used by the countdown.
 const FAIR_START_HOUR = 11;
 
@@ -136,3 +152,15 @@ document.querySelectorAll('form.notify').forEach(form => {
 const edition = fair.getFullYear() - 1986;
 const suffix = n => (n % 100 >= 11 && n % 100 <= 13) ? 'th' : ({ 1: 'st', 2: 'nd', 3: 'rd' }[n % 10] || 'th');
 document.querySelectorAll('[data-fair-edition]').forEach(el => { el.textContent = edition + suffix(edition); });
+
+// ===== Payment buttons =====
+document.querySelectorAll('[data-pay]').forEach(btn => {
+  const url = PAYMENT_LINKS[btn.dataset.pay];
+  if (url) {
+    btn.href = url;
+  } else {
+    btn.removeAttribute('href');
+    btn.classList.add('btn--disabled');
+    btn.textContent = 'Payment link coming soon';
+  }
+});
