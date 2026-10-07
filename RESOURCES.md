@@ -14,7 +14,7 @@ _Last updated: 2026-10-07_
 - [ ] Swap in the full-resolution logo (currently `assets/images/logo-lowres.webp`).
 - [ ] Add past fair photos to the gallery.
 - [ ] Rename the volunteer form for year-round use (drop "2026", use "The Lauraville Fair", update the "40th" wording). The embed link stays the same after renaming.
-- [ ] Create the "Notify me when applications open" Google Form (two short-answer questions: Email, Category), ideally under a @thelauravillefair.org account, link it to a sheet, and send Claude the link to wire up. The email signup boxes on the site are already built and waiting for it.
+- [x] "Notify me" signups connected — done 2026-10-07. Delete the test row ("TEST from website - delete me") from the responses sheet.
 - [ ] Add remaining Google Form links (volunteer is done) to the `FORMS` list at the top of `assets/js/main.js` (notify, artisan, budding, food, orgs, entertainment, sponsor, volunteer). Use the long `.../viewform` link, not a forms.gle short link.
 - [ ] In April: pick the go-live date, set `APPLICATIONS_OPEN` at the top of `assets/js/main.js` — the site switches from "notify me" to the real applications on that date automatically — and email everyone on the notify list.
 - [ ] Decide how vendors pay booth fees after acceptance (currently invoiced). Payments are separate from the application.
@@ -44,6 +44,7 @@ Both registered Sep 2, 2022. Domain privacy is on. Both currently show GoDaddy's
 | GitHub organization `LauravilleFair` (github.com/LauravilleFair) | Website code + hosting (GitHub Pages) | Jaron (owner, via personal account jaronervin) |
 | GitHub repo `LauravilleFair/lauravillefair.github.io` | The site's files (public — required for free Pages) | Same as above |
 | Volunteer sign-up Google Form ("2026 Lauraville Fair - Volunteer Signup", owner anne@thelauravillefair.org) | Embedded on Get Involved page, open year-round | Embed link: https://docs.google.com/forms/d/e/1FAIpQLSeDDVWm9sAnAsSfnVpJs2xV83ABrG366GGnju-wbQtdi0TFZA/viewform |
+| "Lauraville Fair - Sign up for Notifications" Google Form + (Responses) sheet, owner jay@thelauravillefair.org | Email list for "notify me when applications open" — powers every signup box on the site | Form ID + entry codes are in `NOTIFY_FORM` at the top of `assets/js/main.js` |
 | Google Forms + Drive spreadsheet | Vendor/volunteer/etc. applications | _Whose Google account owns these? Ideally the fair's Workspace account_ |
 
 ## DNS changes for launch (don't do these until the site is ready)
