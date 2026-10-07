@@ -131,3 +131,8 @@ document.querySelectorAll('form.notify').forEach(form => {
     }
   });
 });
+
+// ===== Which year of the fair (2026 was the 40th) =====
+const edition = fair.getFullYear() - 1986;
+const suffix = n => (n % 100 >= 11 && n % 100 <= 13) ? 'th' : ({ 1: 'st', 2: 'nd', 3: 'rd' }[n % 10] || 'th');
+document.querySelectorAll('[data-fair-edition]').forEach(el => { el.textContent = edition + suffix(edition); });

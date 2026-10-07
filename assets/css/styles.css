@@ -223,3 +223,4 @@ p { margin: 0 0 1em; }
 .notify button:disabled { opacity: .6; cursor: wait; }
 .notify__done { color: var(--navy) !important; font-weight: 600; margin-top: 12px; }
 .notify__error { color: #a32020 !important; margin-top: 12px; }
+.hero__edition { display: inline-block; margin: 14px 0 0; padding: 5px 14px; border: 2px solid var(--butter); border-radius: 999px; color: var(--butter); font: 600 .85rem/1.2 "Poppins", sans-serif; letter-spacing: .14em; text-transform: uppercase; }
