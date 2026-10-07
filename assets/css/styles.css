@@ -185,3 +185,21 @@ p { margin: 0 0 1em; }
 .footer-brand { font: 400 2.2rem/1 "Allura", cursive; color: #fff; }
 .footer-brand b { font: 700 1rem "Poppins", sans-serif; color: var(--butter); letter-spacing: .08em; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 32px; padding-top: 18px; font-size: .88rem; }
+
+/* ===== Vendor categories & applications ===== */
+.card--link { text-decoration: none; color: inherit; transition: transform .12s ease, border-color .12s ease; }
+.card--link:hover { transform: translateY(-2px); border-color: var(--navy); }
+.price { font: 700 1.05rem/1.3 "Poppins", sans-serif; color: var(--navy); margin-top: auto; }
+.tiers .price { margin: 0 0 8px; }
+.note { text-align: center; color: var(--muted); margin-top: 24px; }
+.split--top { align-items: start; }
+.facts { padding-left: 1.2em; margin: 0 0 1.2em; }
+.facts li { margin-bottom: 4px; }
+
+.apply { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+.apply h3 { margin-bottom: .3em; }
+.apply p { color: var(--muted); }
+.form-embed iframe { width: 100%; border: 0; display: block; }
+.form-embed[data-embed="notify"] iframe { height: 520px; }
+.form-embed:not([data-embed="notify"]) iframe { height: 1400px; }
+.form-embed__missing { margin: 12px 0 0; }

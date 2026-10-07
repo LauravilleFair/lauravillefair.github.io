@@ -1,3 +1,25 @@
+// ===== Settings: edit these =====
+
+// The day applications open, e.g. '2027-04-15'. Before this date every
+// application area shows the "notify me" form; from this date on it shows
+// the real application. Leave as null to keep showing "notify me".
+const APPLICATIONS_OPEN = null;
+
+// Google Form links. Use each form's normal share link (ends in /viewform).
+const FORMS = {
+  notify: '',         // "Notify me when applications open"
+  artisan: '',
+  budding: '',
+  food: '',
+  orgs: '',
+  entertainment: '',
+  sponsor: '',
+  volunteer: '',
+};
+
+// Fair day start time (24-hour clock), used by the countdown.
+const FAIR_START_HOUR = 11;
+
 // ===== Mobile menu =====
 const toggle = document.querySelector('.nav-toggle');
 const links = document.getElementById('nav-links');
@@ -33,7 +55,7 @@ document.querySelectorAll('[data-fair-year]').forEach(el => { el.textContent = f
 // ===== Countdown =====
 const countdown = document.querySelector('.countdown');
 if (countdown) {
-  const start = new Date(fair); start.setHours(10); // TODO: confirm start time
+  const start = new Date(fair); start.setHours(FAIR_START_HOUR);
   const tick = () => {
     const ms = Math.max(0, start - new Date());
     const parts = {
@@ -52,3 +74,23 @@ if (countdown) {
 
 // ===== Footer year =====
 document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
+
+// ===== Applications: "notify me" before they open, the real form after =====
+const isOpen = APPLICATIONS_OPEN && new Date() >= new Date(APPLICATIONS_OPEN + 'T00:00:00');
+document.querySelectorAll('.apply[data-form]').forEach(block => {
+  block.querySelector('.apply__closed').hidden = !!isOpen;
+  block.querySelector('.apply__open').hidden = !isOpen;
+});
+
+document.querySelectorAll('.form-embed[data-embed]').forEach(box => {
+  if (box.closest('[hidden]')) return; // don't load forms nobody can see
+  const url = FORMS[box.dataset.embed];
+  if (!url) return;
+  const src = url.replace(/\/viewform.*$/, '/viewform') + '?embedded=true';
+  box.innerHTML = '';
+  const frame = document.createElement('iframe');
+  frame.src = src;
+  frame.loading = 'lazy';
+  frame.title = 'Application form';
+  box.appendChild(frame);
+});
