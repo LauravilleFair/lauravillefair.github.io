@@ -13,7 +13,12 @@ _Last updated: 2026-10-07_
 - [ ] Fill in the yellow-highlighted placeholders on the draft site (hours, address, fees, FAQ answers, etc.).
 - [ ] Swap in the full-resolution logo (currently `assets/images/logo-lowres.webp`).
 - [ ] Add past fair photos to the gallery.
-- [ ] Link each form button to its Google Form (vendor, performer, volunteer, sponsor) — URLs go in the `href` of those buttons.
+- [ ] Create a "Notify me when applications open" Google Form (email + which categories they're interested in).
+- [ ] Add Google Form links to the `FORMS` list at the top of `assets/js/main.js` (notify, artisan, budding, food, orgs, entertainment, sponsor, volunteer). Use the long `.../viewform` link, not a forms.gle short link.
+- [ ] In April: pick the go-live date, set `APPLICATIONS_OPEN` at the top of `assets/js/main.js` — the site switches from "notify me" to the real applications on that date automatically — and email everyone on the notify list.
+- [ ] Decide how vendors pay booth fees after acceptance (currently invoiced). Payments are separate from the application.
+- [ ] Confirm 2027 prices (site shows 2026: Artisan $75 +$10 spotlight, Budding $25 +$5, Food $200, Neighborhood org $50, 501(c)(3) free; sponsors Silver $500, Community $300, Friend of the Fair $100 or $150?, Platinum/Gold prices unknown).
+- [ ] Budding Entrepreneur: decide age range / guardian rules for the vendor page.
 - [ ] Find out who is the Google Workspace admin for @thelauravillefair.org.
 - [ ] **Before launch:** verify thelauravillefair.org in the GitHub org settings (adds one TXT record in GoDaddy; prevents anyone else claiming the domain on GitHub).
 - [ ] **Launch day:** point thelauravillefair.org at GitHub (see DNS section below), then set the custom domain in the repo's Pages settings and tick "Enforce HTTPS".
