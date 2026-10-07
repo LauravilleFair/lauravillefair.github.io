@@ -4,7 +4,7 @@ Source for the [thelauravillefair.org](https://thelauravillefair.org) website, h
 
 Plain HTML/CSS — no build step. Edit the `.html` files directly.
 
-- `RESOURCES.md` — domains, accounts, DNS, and open to-dos
+- `RESOURCES.md` (local only, not published) — domains, accounts, DNS, and open to-dos
 - `assets/css/styles.css` — all styling (colors are at the top)
 - `assets/js/main.js` — mobile menu, fair date (always the last Saturday in September), countdown
 
