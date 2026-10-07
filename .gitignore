@@ -6,3 +6,6 @@ desktop.ini
 # Editor/tool settings
 .vscode/
 .claude/
+
+# Private notes (never published)
+PRIVATE-NOTES.md
