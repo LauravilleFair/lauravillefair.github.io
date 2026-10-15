@@ -235,7 +235,9 @@ p { margin: 0 0 1em; }
 .btn--disabled { background: var(--line); color: var(--muted) !important; cursor: default; pointer-events: none; }
 
 /* ===== Sponsor logos ===== */
-.sponsor-logos { list-style: none; padding: 0; margin: 0 0 40px; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+.sponsor-logos { list-style: none; padding: 0; margin: 0 auto 40px; max-width: 960px; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.sponsor-logos li { flex: 0 0 calc((100% - 3 * 16px) / 4); }   /* 4 per row; a short last row stays centered */
+@media (max-width: 640px) { .sponsor-logos li { flex-basis: calc((100% - 16px) / 2); height: 110px; } }   /* 2 per row on phones */
 .sponsor-logos li { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); height: 130px; display: flex; align-items: center; justify-content: center; padding: 14px; overflow: hidden; }
 .sponsor-logos img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .sponsor-logos a { display: flex; width: 100%; height: 100%; align-items: center; justify-content: center; border-radius: 8px; }
