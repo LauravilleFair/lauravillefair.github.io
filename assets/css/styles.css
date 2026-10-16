@@ -244,8 +244,8 @@ p { margin: 0 0 1em; }
 .sponsor-logos li:has(a):hover { border-color: var(--navy); }
 
 /* ===== Photo gallery ===== */
-.gallery__item { display: block; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: var(--navy-soft); }
-.gallery__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease; }
+.gallery__item { display: block; position: relative; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: var(--navy-soft); }
+.gallery__item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease; }
 .gallery__item:hover img { transform: scale(1.04); }
 .lightbox { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; }
 .lightbox::backdrop { background: rgba(5, 20, 32, .92); }
