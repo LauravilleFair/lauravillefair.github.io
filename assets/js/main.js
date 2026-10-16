@@ -193,3 +193,54 @@ if (lightbox) {
     if (e.key === 'ArrowRight') show(current + 1);
   });
 }
+
+// ===== Home page photo slideshow =====
+// Swaps one tile at a time with a fade, cycling through every gallery photo.
+// Pauses on hover/focus, with the pause button, or when the tab is hidden.
+// Doesn't move at all for visitors who ask their device to reduce motion.
+const rotator = document.querySelector('.rotator');
+if (rotator) {
+  const photos = JSON.parse(rotator.dataset.photos);
+  const tiles = [...rotator.querySelectorAll('.gallery__item')];
+  const pauseBtn = document.querySelector('.rotator__pause');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const queue = photos.slice(tiles.length);            // photos not currently showing
+  const showing = photos.slice(0, tiles.length);
+  let nextTile = 0, userPaused = false, hovered = false;
+
+  const swap = () => {
+    if (userPaused || hovered || document.hidden || !queue.length) return;
+    const i = nextTile;
+    nextTile = (nextTile + 1) % tiles.length;
+    const incoming = queue.shift();
+    queue.push(showing[i]);
+    showing[i] = incoming;
+    const tile = tiles[i];
+    const oldImg = tile.querySelector('img');
+    const img = new Image();
+    img.alt = incoming.alt;
+    img.width = 640; img.height = 480;
+    img.className = 'rotator__incoming';
+    img.onload = () => {
+      tile.appendChild(img);
+      requestAnimationFrame(() => img.classList.add('is-in'));
+      setTimeout(() => { oldImg.remove(); img.classList.remove('rotator__incoming', 'is-in'); }, 900);
+    };
+    img.src = incoming.src;
+  };
+
+  if (reduceMotion || photos.length <= tiles.length) {
+    if (pauseBtn) pauseBtn.parentElement.hidden = true;
+  } else {
+    setInterval(swap, 3000);
+    rotator.addEventListener('mouseenter', () => { hovered = true; });
+    rotator.addEventListener('mouseleave', () => { hovered = false; });
+    rotator.addEventListener('focusin', () => { hovered = true; });
+    rotator.addEventListener('focusout', () => { hovered = false; });
+    pauseBtn.addEventListener('click', () => {
+      userPaused = !userPaused;
+      pauseBtn.setAttribute('aria-pressed', userPaused);
+      pauseBtn.textContent = userPaused ? 'Play slideshow' : 'Pause slideshow';
+    });
+  }
+}

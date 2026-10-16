@@ -259,3 +259,9 @@ p { margin: 0 0 1em; }
 .lightbox__next { right: 16px; top: 50%; transform: translateY(-50%); }
 .gallery--year { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 640px) { .gallery--year { grid-template-columns: repeat(2, 1fr); } }
+
+/* ===== Home page photo slideshow ===== */
+.rotator .rotator__incoming { opacity: 0; transition: opacity .8s ease; z-index: 1; }
+.rotator .rotator__incoming.is-in { opacity: 1; }
+.rotator__controls { text-align: right; margin: 8px 0 0; }
+.rotator__pause { background: none; border: 0; color: var(--navy); font: 500 .85rem "Inter", sans-serif; text-decoration: underline; cursor: pointer; padding: 4px; }
