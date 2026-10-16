@@ -164,3 +164,32 @@ document.querySelectorAll('[data-pay]').forEach(btn => {
     btn.textContent = 'Payment link coming soon';
   }
 });
+
+// ===== Gallery lightbox =====
+const lightbox = document.querySelector('.lightbox');
+if (lightbox) {
+  const items = [...document.querySelectorAll('[data-lightbox]')];
+  const img = lightbox.querySelector('img');
+  const caption = lightbox.querySelector('.lightbox__caption');
+  let current = 0;
+  const show = i => {
+    current = (i + items.length) % items.length;
+    const thumb = items[current].querySelector('img');
+    img.src = items[current].href;
+    img.alt = thumb.alt;
+    caption.textContent = thumb.alt;
+  };
+  items.forEach((a, i) => a.addEventListener('click', e => {
+    e.preventDefault();
+    show(i);
+    lightbox.showModal();
+  }));
+  lightbox.querySelector('.lightbox__close').addEventListener('click', () => lightbox.close());
+  lightbox.querySelector('.lightbox__prev').addEventListener('click', () => show(current - 1));
+  lightbox.querySelector('.lightbox__next').addEventListener('click', () => show(current + 1));
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
+  lightbox.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+}
