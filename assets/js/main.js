@@ -9,7 +9,7 @@ const APPLICATIONS_OPEN = null;
 const FORMS = {
   artisan: '',
   budding: 'https://square.link/u/dtzwu9ip',
-  food: '',
+  food: 'https://square.link/u/Gz77pTHX',
   orgs: '',
   entertainment: '',
   sponsor: '',
@@ -31,7 +31,7 @@ const NOTIFY_FORM = {
 const PAYMENT_LINKS = {
   artisan: 'https://square.link/u/KQYYYqcs',
   budding: 'https://square.link/u/dtzwu9ip',
-  food: '',
+  food: 'https://square.link/u/Gz77pTHX',
   orgs: '',
   sponsorship: '',   // one link; sponsors pick their tier at checkout
 };
