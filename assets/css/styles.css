@@ -279,3 +279,6 @@ p { margin: 0 0 1em; }
 .org-tiers { margin: 0 0 1.2em; }
 .org-tiers p { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 0 0 10px; color: var(--ink); }
 .org-tiers p.org-tiers__note { background: none; border: 0; padding: 4px 0 0; color: var(--muted); }
+
+/* "Rates shown are from last year" note (hidden automatically once applications open) */
+.rates-note { display: inline-block; margin-top: 12px; padding: 8px 14px; border-radius: 10px; background: #fff7c2; border: 1px solid #e9d97a; color: #5c4a00 !important; font-size: .95rem; }

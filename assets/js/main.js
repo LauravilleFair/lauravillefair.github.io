@@ -96,6 +96,8 @@ document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Da
 
 // ===== Applications: "notify me" before they open, the real form after =====
 const isOpen = APPLICATIONS_OPEN && new Date() >= new Date(APPLICATIONS_OPEN + 'T00:00:00');
+// Notes like "rates shown are from last year" disappear once applications open.
+document.querySelectorAll('[data-until-open]').forEach(el => { el.hidden = !!isOpen; });
 document.querySelectorAll('.apply[data-form]').forEach(block => {
   block.querySelector('.apply__closed').hidden = !!isOpen;
   block.querySelector('.apply__open').hidden = !isOpen;
