@@ -265,3 +265,12 @@ p { margin: 0 0 1em; }
 .rotator .rotator__incoming.is-in { opacity: 1; }
 .rotator__controls { text-align: right; margin: 8px 0 0; }
 .rotator__pause { background: none; border: 0; color: var(--navy); font: 500 .85rem "Inter", sans-serif; text-decoration: underline; cursor: pointer; padding: 4px; }
+
+/* ===== Pay page: 4 booth cards + 1 sponsorship card ===== */
+.pay-grid { display: grid; gap: 22px; grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 960px) { .pay-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .pay-grid { grid-template-columns: 1fr; } }
+.pay-card--sponsor { max-width: 460px; margin: 0 auto; }
+.tier-list { list-style: none; padding: 0; margin: 0 0 18px; }
+.tier-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.tier-list b { color: var(--navy); }

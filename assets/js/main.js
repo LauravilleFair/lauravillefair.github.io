@@ -29,17 +29,11 @@ const NOTIFY_FORM = {
 // Square payment links for the hidden "Pay your booth fee" page (pay-booth-fee.html).
 // Paste each Square payment link between the quotes.
 const PAYMENT_LINKS = {
-  artisan: '',
-  artisanSpotlight: '',
+  artisan: 'https://square.link/u/KQYYYqcs',
   budding: '',
-  buddingSpotlight: '',
   food: '',
   orgs: '',
-  friend: '',
-  community: '',
-  silver: '',
-  gold: '',
-  platinum: '',
+  sponsorship: '',   // one link; sponsors pick their tier at checkout
 };
 
 // Fair day start time (24-hour clock), used by the countdown.

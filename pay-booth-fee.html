@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=16">
+  <link rel="stylesheet" href="assets/css/styles.css?v=17">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -57,7 +57,7 @@
           Applying doesn't guarantee a spot.
         </div>
         <ol class="steps">
-          <li><strong>Find your category below</strong> and click its pay button. Choose the Social Media Spotlight option if you signed up for one.</li>
+          <li><strong>Find your category below</strong> and click its pay button. If you signed up for a Social Media Spotlight, add it at checkout.</li>
           <li><strong>Enter your business or organization name</strong> at checkout so we can match your payment.</li>
           <li><strong>Pay securely through Square</strong> by card, Apple Pay, Google Pay, or Cash App Pay. You'll get a receipt by email.</li>
         </ol>
@@ -68,42 +68,30 @@
     <section class="section section--tint" id="vendors">
       <div class="container">
         <div class="section__head"><span class="eyebrow">Vendors</span><h2>Booth fees</h2></div>
-        <div class="grid grid--3">
+        <div class="pay-grid">
           <div class="card pay-card">
             <h3>Artisan</h3>
             <span class="price">$75</span>
-            
-            <a class="btn btn--navy" data-pay="artisan" href="#" target="_blank" rel="noopener">Pay $75</a>
-          </div>
-          <div class="card pay-card">
-            <h3>Artisan + Social Media Spotlight</h3>
-            <span class="price">$85</span>
-            
-            <a class="btn btn--navy" data-pay="artisanSpotlight" href="#" target="_blank" rel="noopener">Pay $85</a>
+            <p>Optional Social Media Spotlight: +$10 at checkout.</p>
+            <a class="btn btn--navy" data-pay="artisan" href="#" target="_blank" rel="noopener">Pay booth fee</a>
           </div>
           <div class="card pay-card">
             <h3>Budding Entrepreneur</h3>
             <span class="price">$25</span>
-            
-            <a class="btn btn--navy" data-pay="budding" href="#" target="_blank" rel="noopener">Pay $25</a>
-          </div>
-          <div class="card pay-card">
-            <h3>Budding Entrepreneur + Social Media Spotlight</h3>
-            <span class="price">$30</span>
-            
-            <a class="btn btn--navy" data-pay="buddingSpotlight" href="#" target="_blank" rel="noopener">Pay $30</a>
+            <p>Optional Social Media Spotlight: +$5 at checkout.</p>
+            <a class="btn btn--navy" data-pay="budding" href="#" target="_blank" rel="noopener">Pay booth fee</a>
           </div>
           <div class="card pay-card">
             <h3>Food Vendor</h3>
             <span class="price">$200</span>
             <p>Social Media Spotlight included.</p>
-            <a class="btn btn--navy" data-pay="food" href="#" target="_blank" rel="noopener">Pay $200</a>
+            <a class="btn btn--navy" data-pay="food" href="#" target="_blank" rel="noopener">Pay booth fee</a>
           </div>
           <div class="card pay-card">
             <h3>Neighborhood Organization</h3>
             <span class="price">$50</span>
             <p>501(c)(3) nonprofits: no fee, nothing to pay!</p>
-            <a class="btn btn--navy" data-pay="orgs" href="#" target="_blank" rel="noopener">Pay $50</a>
+            <a class="btn btn--navy" data-pay="orgs" href="#" target="_blank" rel="noopener">Pay booth fee</a>
           </div>
         </div>
       </div>
@@ -115,37 +103,17 @@
           <span class="eyebrow">Sponsors</span><h2>Sponsorships</h2>
           <p>Thank you for supporting The Lauraville Fair! The Lauraville Fair Inc. is a 501(c)(3) nonprofit, so your sponsorship is tax-deductible.</p>
         </div>
-        <div class="grid grid--3">
-          <div class="card pay-card">
-            <h3>Friend of the Fair</h3>
-            <span class="price">$150</span>
-            
-            <a class="btn btn--navy" data-pay="friend" href="#" target="_blank" rel="noopener">Pay $150</a>
-          </div>
-          <div class="card pay-card">
-            <h3>Community Sponsor</h3>
-            <span class="price">$300</span>
-            
-            <a class="btn btn--navy" data-pay="community" href="#" target="_blank" rel="noopener">Pay $300</a>
-          </div>
-          <div class="card pay-card">
-            <h3>Silver Sponsor</h3>
-            <span class="price">$500</span>
-            
-            <a class="btn btn--navy" data-pay="silver" href="#" target="_blank" rel="noopener">Pay $500</a>
-          </div>
-          <div class="card pay-card">
-            <h3>Gold Sponsor</h3>
-            <span class="price">$750</span>
-            
-            <a class="btn btn--navy" data-pay="gold" href="#" target="_blank" rel="noopener">Pay $750</a>
-          </div>
-          <div class="card pay-card">
-            <h3>Platinum Sponsor</h3>
-            <span class="price">$1,000+</span>
-            
-            <a class="btn btn--navy" data-pay="platinum" href="#" target="_blank" rel="noopener">Pay $1,000+</a>
-          </div>
+        <div class="card pay-card pay-card--sponsor">
+          <h3>Sponsorship</h3>
+          <p>Choose your tier at checkout:</p>
+          <ul class="tier-list">
+            <li><span>Friend of the Fair</span><b>$150</b></li>
+            <li><span>Community Sponsor</span><b>$300</b></li>
+            <li><span>Silver Sponsor</span><b>$500</b></li>
+            <li><span>Gold Sponsor</span><b>$750</b></li>
+            <li><span>Platinum Sponsor</span><b>$1,000</b></li>
+          </ul>
+          <a class="btn btn--navy" data-pay="sponsorship" href="#" target="_blank" rel="noopener">Pay sponsorship</a>
         </div>
       </div>
     </section>
@@ -184,6 +152,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=9"></script>
+  <script src="assets/js/main.js?v=10"></script>
 </body>
 </html>
