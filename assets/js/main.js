@@ -8,7 +8,7 @@ const APPLICATIONS_OPEN = null;
 // Google Form links. Use each form's normal share link (ends in /viewform).
 const FORMS = {
   artisan: '',
-  budding: '',
+  budding: 'https://square.link/u/dtzwu9ip',
   food: '',
   orgs: '',
   entertainment: '',
@@ -30,7 +30,7 @@ const NOTIFY_FORM = {
 // Paste each Square payment link between the quotes.
 const PAYMENT_LINKS = {
   artisan: 'https://square.link/u/KQYYYqcs',
-  budding: '',
+  budding: 'https://square.link/u/dtzwu9ip',
   food: '',
   orgs: '',
   sponsorship: '',   // one link; sponsors pick their tier at checkout
