@@ -33,7 +33,7 @@ const PAYMENT_LINKS = {
   budding: 'https://square.link/u/dtzwu9ip',
   food: 'https://square.link/u/Gz77pTHX',
   orgs: 'https://square.link/u/v1QlqGTm',
-  sponsorship: '',   // one link; sponsors pick their tier at checkout
+  sponsorship: 'https://square.link/u/rUskEm4t',   // one link; sponsors pick their tier at checkout
 };
 
 // Fair day start time (24-hour clock), used by the countdown.
