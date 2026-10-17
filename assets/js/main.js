@@ -8,7 +8,7 @@ const APPLICATIONS_OPEN = null;
 // Google Form links. Use each form's normal share link (ends in /viewform).
 const FORMS = {
   artisan: '',
-  budding: 'https://square.link/u/dtzwu9ip',
+  budding: '',
   food: '',
   orgs: '',
   entertainment: '',
