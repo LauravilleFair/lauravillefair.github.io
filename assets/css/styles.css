@@ -274,3 +274,8 @@ p { margin: 0 0 1em; }
 .tier-list { list-style: none; padding: 0; margin: 0 0 18px; }
 .tier-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--line); }
 .tier-list b { color: var(--navy); }
+
+/* ===== Community organization tiers ===== */
+.org-tiers { margin: 0 0 1.2em; }
+.org-tiers p { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 0 0 10px; color: var(--ink); }
+.org-tiers p.org-tiers__note { background: none; border: 0; padding: 4px 0 0; color: var(--muted); }
