@@ -32,7 +32,7 @@ const PAYMENT_LINKS = {
   artisan: 'https://square.link/u/KQYYYqcs',
   budding: 'https://square.link/u/dtzwu9ip',
   food: 'https://square.link/u/Gz77pTHX',
-  orgs: '',
+  orgs: 'https://square.link/u/v1QlqGTm',
   sponsorship: '',   // one link; sponsors pick their tier at checkout
 };
 
