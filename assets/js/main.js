@@ -9,7 +9,7 @@ const APPLICATIONS_OPEN = null;
 const FORMS = {
   artisan: '',
   budding: 'https://square.link/u/dtzwu9ip',
-  food: 'https://square.link/u/Gz77pTHX',
+  food: '',
   orgs: '',
   entertainment: '',
   sponsor: '',
