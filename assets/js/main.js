@@ -13,7 +13,7 @@ const FORMS = {
   orgs: '',
   entertainment: '',
   sponsor: '',
-  volunteer: 'https://docs.google.com/forms/d/e/1FAIpQLSeDDVWm9sAnAsSfnVpJs2xV83ABrG366GGnju-wbQtdi0TFZA/viewform',
+  volunteer: 'https://docs.google.com/forms/d/e/1FAIpQLScFg6_XKZ6nJEc7A5YPPMD-gkOqgxM2j5RRvMKCqe0HeOlsjA/viewform',   // year-round "Get Involved" form
 };
 
 // The "notify me when applications open" list. Signups are sent to this
